@@ -166,6 +166,6 @@ def display(img, output, threshold):
         h, w = img.shape[0:2]
         bbox = [row[2:6] * nd.array((w, h, w, h), ctx=row.context)]
         d2l.show_bboxes(fig.axes, bbox, '%.2f' % score, 'w')
-
+        
 display(img, output, threshold=0.32)
 
