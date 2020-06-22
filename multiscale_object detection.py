@@ -8,7 +8,7 @@ Created on Wed Jun 17 20:06:25 2020
 import d2lzh as d2l
 from mxnet import contrib, image, nd
 
-img = image.imread('C:/Users/mayao/d2l-zh/img/catdog.jpg')
+img = image.imread('.../catdog.jpg')
 h, w = img.shape[0:2]
 
 d2l.set_figsize()
