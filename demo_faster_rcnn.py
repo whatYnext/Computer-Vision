@@ -1,9 +1,5 @@
-"""02. Predict with pre-trained Faster RCNN models
-==============================================
+""" Predict with pre-trained Faster RCNN models
 
-This article shows how to play with pre-trained Faster RCNN model.
-
-First let's import some necessary libraries:
 """
 
 from matplotlib import pyplot as plt
@@ -13,15 +9,6 @@ from gluoncv import model_zoo, data, utils
 ######################################################################
 # Load a pretrained model
 # -------------------------
-#
-# Let's get an Faster RCNN model trained on Pascal VOC
-# dataset with ResNet-50 backbone. By specifying
-# ``pretrained=True``, it will automatically download the model from the model
-# zoo if necessary. For more pretrained models, please refer to
-# :doc:`../../model_zoo/index`.
-#
-# The returned model is a HybridBlock :py:class:`gluoncv.model_zoo.FasterRCNN`
-# with a default context of `cpu(0)`.
 
 net = model_zoo.get_model('faster_rcnn_resnet50_v1b_voc', pretrained=True)
 
@@ -32,11 +19,7 @@ net = model_zoo.get_model('faster_rcnn_resnet50_v1b_voc', pretrained=True)
 # Next we download an image, and pre-process with preset data transforms.
 # The default behavior is to resize the short edge of the image to 600px.
 # But you can feed an arbitrarily sized image.
-#
-# You can provide a list of image file names, such as ``[im_fname1, im_fname2,
-# ...]`` to :py:func:`gluoncv.data.transforms.presets.rcnn.load_test` if you
-# want to load multiple image together.
-#
+
 # This function returns two results. The first is a NDArray with shape
 # `(batch_size, RGB_channels, height, width)`. It can be fed into the
 # model directly. The second one contains the images in numpy format to
