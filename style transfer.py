@@ -16,10 +16,10 @@ from mxnet.gluon import model_zoo, nn
 import time
 
 d2l.set_figsize()
-content_img = image.imread('C:/Users/mayao/Desktop/rivers.jpg')
+content_img = image.imread('.../mountains.jpg')
 d2l.plt.imshow(content_img.asnumpy());
 
-style_img = image.imread('C:/Users/mayao/Desktop/berlin.jpg')
+style_img = image.imread('.../flowers.jpg')
 d2l.plt.imshow(style_img.asnumpy());
 
 rgb_mean = nd.array([0.485, 0.456, 0.406])
@@ -148,4 +148,4 @@ content_X, contents_Y = get_contents(image_shape, ctx)
 _, styles_Y = get_styles(image_shape, ctx)
 output = train(content_X, contents_Y, styles_Y, ctx, 0.01, 300, 100)
 
-d2l.plt.imsave('C:/Users/mayao/Desktop/composite.png', postprocess(output).asnumpy())
+d2l.plt.imsave('C:.../composite.png', postprocess(output).asnumpy())
