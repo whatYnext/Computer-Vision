@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Implementation of Full Convolutional Network 
+Implementation of Full Convolutional Network for semantic segmentation
 
 1. Matrix manipulation to complement convolution computation
 
