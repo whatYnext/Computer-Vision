@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Inplementation of style learning
+Inplementation of style transfer
 
 1. Three loss functions: content loss, style loss and total variation loss
 
